@@ -14,5 +14,5 @@
 - Tổng quan : aireplay-ng là công cụ dùng để inject vào frames, chức năng chính là dùng để tạo traffic cho cracking wep và wpa2. ngoài ra còn có thể dùng các chức năng như deauthen, fake authen, arp request,…
 - Để có thể bắt được nhiều IV trong một khoảng thời gian ngắn thì ta cần :
   - Fake authentication một client có sẵn để giao tiếp với AP bằng aireplay-ng
-![fake authen](https://github.com/annapsyktova/wepcracking/blob/img/1.png)
+![fake authen](https://github.com/annapsyktova/wepcracking/blob/img/1.png) /n
   , trong đó -a là bssid của AP,  còn -h là địa chỉ MACcủa card mạng sử dụng 
