@@ -24,11 +24,15 @@
 - Tổng quan : là công cụ để crack wep/wpa2.  Có thể sử dụng trên windows cũng như linux. Trên windows thì aircrack-ng có giao diện như thế này :
 
 ![aircrack-ng GUI windows](https://github.com/annapsyktova/wepcracking/blob/img/3.png)
-
 ![aircrack-ng GUI windows](https://github.com/annapsyktova/wepcracking/blob/img/4.png)
-
 ![aircrack-ng GUI windows](https://github.com/annapsyktova/wepcracking/blob/img/5.png)
-
 - Trên kali thì aircrack-ng sẽ có giao diện như thế này :
 
 ![aircrack-ng kali](https://github.com/annapsyktova/wepcracking/blob/img/6.png)
+3. Airodump-ng
+- Tổng quan : là công cụ để bắt gói tin, bắt thông tin các mạng xung quanh, từ đây chúng ta có thể biết được các thông tin quan trọng như BSSID, channel, các client truy cập vào AP.
+- Để thực hiện bắt gói tin bằng airodump :
+  - Sử dụng câu lệnh airodump-ng wlan0mon :
+  ![airodump-ng](https://github.com/annapsyktova/wepcracking/blob/img/6.png)
+  - sau khi có các thông tin như bssid và channel của AP,  ta tiếp tục sử dụng airodump-ng để bắt gói tin
+  ![airodump-ng](https://github.com/annapsyktova/wepcracking/blob/img/7.png)
