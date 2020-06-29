@@ -15,4 +15,4 @@
 - Để có thể bắt được nhiều IV trong một khoảng thời gian ngắn thì ta cần :
   - Fake authentication một client có sẵn để giao tiếp với AP bằng aireplay-ng
 ![fake authen](https://github.com/annapsyktova/wepcracking/blob/img/1.png)
-trong đó -a là bssid của AP,  còn -h là địa chỉ MACcủa card mạng sử dụng 
+  , trong đó -a là bssid của AP,  còn -h là địa chỉ MACcủa card mạng sử dụng 
