@@ -16,6 +16,15 @@
   - Fake authentication một client có sẵn để giao tiếp với AP bằng aireplay-ng, trong đó -a là bssid của AP,  còn -h là địa chỉ MACcủa card mạng sử dụng :
   
 ![fake authen](https://github.com/annapsyktova/wepcracking/blob/img/1.png)
-  - Tiếp theo ta sẽ tấn công arp vào mạng để tăng traffic trong mạng,  rút ngắn thời gian bắt gói tin, trong đó -3 là option arp-request, -b là bssid của AP, -h là địa chỉ MAC của card mạng 
+  - Tiếp theo ta sẽ tấn công arp vào mạng để tăng traffic trong mạng,  rút ngắn thời gian bắt gói tin, trong đó -3 là option arp-request, -b là bssid của AP, -h là địa chỉ MAC của card mạng :
+  
   ![arp replay](https://github.com/annapsyktova/wepcracking/blob/img/2.png)
   
+2. Aircrack-ng
+- Tổng quan : là công cụ để crack wep/wpa2.  Có thể sử dụng trên windows cũng như linux. Trên windows thì aircrack-ng có giao diện như thế này :
+
+[aircrack-ng GUI windows](https://github.com/annapsyktova/wepcracking/blob/img/3.png)
+
+[aircrack-ng GUI windows](https://github.com/annapsyktova/wepcracking/blob/img/4.png)
+
+[aircrack-ng GUI windows](https://github.com/annapsyktova/wepcracking/blob/img/5.png)
