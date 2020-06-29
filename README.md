@@ -54,4 +54,27 @@
 
 5. Kismet
 - Là công cụ bắt gói tin trên linux, giống như airodump-ng.
-- để chạy Kismet, ta cần enable monitor mode của card mạng và chạy kismet. Web interface lúc đó sẽ sẵn sàng ở địa chỉ [localhost:2501](http:\\localhost:2501)
+- Để chạy Kismet, ta cần enable monitor mode của card mạng và chạy kismet. Web interface lúc đó sẽ sẵn sàng ở địa chỉ [localhost:2501](http:\\localhost:2501)
+- Chọn data source và chọn card mạng đã bật monitor mode :
+![Kismet data source](https://github.com/annapsyktova/wepcracking/blob/img/13.png)
+
+- Khi biết được channel của wifi cần bắt ta sẽ tập trung vào channel đó :
+![Kismet choose channel](https://github.com/annapsyktova/wepcracking/blob/img/14.png)
+
+- Các thông tin về AP bắt được : 
+![Kismet AP capture](https://github.com/annapsyktova/wepcracking/blob/img/15.png)
+
+- Khi bắt gói tin thì sẽ có log file lưu lại (ta có thể chỉnh log file về dạng .pcapng),  sau đó có thể convert file log sang file .pcap và dùng aircrack-ng để crack.
+
+## Kịch bản :
+
+- Cracking wep sẽ đi theo 2 hướng dựa vào các phần mềm trên windows hay linux
+  - Kịch bản 1 : Sử dụng máy windows 10, wireless card Intel AC-9560
+    - Bước 1 : sử dụng Commview để bắt gói tin.
+    - Bước 2 : tăng tốc quá trình bắt gói tin : 
+      
+      Trong thực tế nếu để quá trình bắt gói tin như bình thường và client kết nối vào cũng không tích cực hoạt động thì phải mất vài giờ bắt gói tin để có thể đủ gói tin cho việc crack thành công mật khẩu wep 
+      Quá trình bắt gói tin có thể kéo dài, vì vậy ta cần đẩy nhanh quá trình này lên bằng aireplay-ng  :  mạo danh client bằng fake authen sau đó gửi arp request làm tăng traffic trong mạng 
+    - Bước 3 : crack wep bằng aircrack-ng :
+    
+      Điều kiện cần khi crack wep bằng aircrack-ng là cần phải có một số lượng lớn packet dẫn đến trùng IV thì mới có thể crack được (trong điều kiện thử nghiệm thì cần ~ 50 000 packet để chắc chắn rằngtấn công thành công) 
