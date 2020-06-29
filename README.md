@@ -23,8 +23,8 @@
 2. Aircrack-ng
 - Tổng quan : là công cụ để crack wep/wpa2.  Có thể sử dụng trên windows cũng như linux. Trên windows thì aircrack-ng có giao diện như thế này :
 
-[aircrack-ng GUI windows](https://github.com/annapsyktova/wepcracking/blob/img/3.png)
+![aircrack-ng GUI windows](https://github.com/annapsyktova/wepcracking/blob/img/3.png)
 
-[aircrack-ng GUI windows](https://github.com/annapsyktova/wepcracking/blob/img/4.png)
+![aircrack-ng GUI windows](https://github.com/annapsyktova/wepcracking/blob/img/4.png)
 
-[aircrack-ng GUI windows](https://github.com/annapsyktova/wepcracking/blob/img/5.png)
+![aircrack-ng GUI windows](https://github.com/annapsyktova/wepcracking/blob/img/5.png)
