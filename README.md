@@ -29,26 +29,23 @@
 - Trên kali thì aircrack-ng sẽ có giao diện như thế này :
 
 ![aircrack-ng kali](https://github.com/annapsyktova/wepcracking/blob/img/6.png)
+
 3. Airodump-ng
 - Tổng quan : là công cụ để bắt gói tin, bắt thông tin các mạng xung quanh, từ đây chúng ta có thể biết được các thông tin quan trọng như BSSID, channel, các client truy cập vào AP.
 - Để thực hiện bắt gói tin bằng airodump :
   - Sử dụng câu lệnh airodump-ng wlan0mon :
-  
   ![airodump-ng](https://github.com/annapsyktova/wepcracking/blob/img/7.png)
   - Sau khi có các thông tin như bssid và channel của AP,  ta tiếp tục sử dụng airodump-ng để bắt gói tin
-  
   ![airodump-ng](https://github.com/annapsyktova/wepcracking/blob/img/8.png)
   ![airodump-ng](https://github.com/annapsyktova/wepcracking/blob/img/9.png)
 4. Commview
 - Là công cụ để bắt gói tin trên windows, tương tự như airodump-ng.
 - Giao diện của Commview :
-
 ![Commview GUI](https://github.com/annapsyktova/wepcracking/blob/img/10.png)
 - Cách bắt gói tin trên Commview :
 - Đầu tiên ta sẽ sử dụng scanner mode để tìm kiếm wifi cần thực hiện phá mã.
 - Khi tìm được rồi ta có thể chuyển sang single channel mode với channel trùng với channel của wifi cần tìm và bắt đầu quá trình bắt gói tin.
 ![Commview mode](https://github.com/annapsyktova/wepcracking/blob/img/11.png)
-
 - Commview có chế độ lưu file log và ta có thể export ra file pcap để phục vụ cho việc crack gói tin bằng aircrack-ng :
 ![Commview packet capture](https://github.com/annapsyktova/wepcracking/blob/img/12.png)
 
@@ -57,13 +54,10 @@
 - Để chạy Kismet, ta cần enable monitor mode của card mạng và chạy kismet. Web interface lúc đó sẽ sẵn sàng ở địa chỉ [localhost:2501](http:\\localhost:2501)
 - Chọn data source và chọn card mạng đã bật monitor mode :
 ![Kismet data source](https://github.com/annapsyktova/wepcracking/blob/img/13.png)
-
 - Khi biết được channel của wifi cần bắt ta sẽ tập trung vào channel đó :
 ![Kismet choose channel](https://github.com/annapsyktova/wepcracking/blob/img/14.png)
-
 - Các thông tin về AP bắt được : 
 ![Kismet AP capture](https://github.com/annapsyktova/wepcracking/blob/img/15.png)
-
 - Khi bắt gói tin thì sẽ có log file lưu lại (ta có thể chỉnh log file về dạng .pcapng),  sau đó có thể convert file log sang file .pcap và dùng aircrack-ng để crack.
 
 ## Kịch bản :
