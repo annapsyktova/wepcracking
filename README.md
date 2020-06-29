@@ -28,3 +28,7 @@
 ![aircrack-ng GUI windows](https://github.com/annapsyktova/wepcracking/blob/img/4.png)
 
 ![aircrack-ng GUI windows](https://github.com/annapsyktova/wepcracking/blob/img/5.png)
+
+- Trên kali thì aircrack-ng sẽ có giao diện như thế này :
+
+![aircrack-ng kali](https://github.com/annapsyktova/wepcracking/blob/img/6.png)
