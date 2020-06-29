@@ -54,4 +54,4 @@
 
 5. Kismet
 - Là công cụ bắt gói tin trên linux, giống như airodump-ng.
-- để chạy Kismet, ta cần enable monitor mode của card mạng và chạy kismet. Web interface lúc đó sẽ sẵn sàng ở địa chỉ [localhost:2501]
+- để chạy Kismet, ta cần enable monitor mode của card mạng và chạy kismet. Web interface lúc đó sẽ sẵn sàng ở địa chỉ [localhost:2501](localhost:2501)
