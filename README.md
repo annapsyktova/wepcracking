@@ -70,7 +70,7 @@
       Quá trình bắt gói tin có thể kéo dài, vì vậy ta cần đẩy nhanh quá trình này lên bằng aireplay-ng  :  mạo danh client bằng fake authen sau đó gửi arp request làm tăng traffic trong mạng 
     - Bước 3 : crack wep bằng aircrack-ng :
       Điều kiện cần khi crack wep bằng aircrack-ng là cần phải có một số lượng lớn packet dẫn đến trùng IV thì mới có thể crack được (trong điều kiện thử nghiệm thì cần khoảng 50 000 packet để chắc rằng bẻ khóa thành công) 
-  - Kịch bản 2 : Máy kali 2020, wireless card USB atheros
+  - Kịch bản 2 : Máy kali 2020, wireless card USB TP-Link TD-W8901N
     - Bước 1: ta sử dụng airodump-ng/kismet để dò thông tin về các mạng xung quanh và tìm kiếm các thông tin của AP cần tấn công 
     - Bước 2 :  sử dụng aireplay để fake authen và arp request như phần ở trên.  trong lúc đó airodump-ng sẽ bắt gói tin. 
     - Bước 3 :  khi có đủ gói tin cần thiết ta sẽ dùng aircrack-ng để crack wep : 
