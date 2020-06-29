@@ -34,7 +34,17 @@
 - Để thực hiện bắt gói tin bằng airodump :
   - Sử dụng câu lệnh airodump-ng wlan0mon :
   
-  ![airodump-ng](https://github.com/annapsyktova/wepcracking/blob/img/6.png)
+  ![airodump-ng](https://github.com/annapsyktova/wepcracking/blob/img/7.png)
   - sau khi có các thông tin như bssid và channel của AP,  ta tiếp tục sử dụng airodump-ng để bắt gói tin
   
-  ![airodump-ng](https://github.com/annapsyktova/wepcracking/blob/img/7.png)
+  ![airodump-ng](https://github.com/annapsyktova/wepcracking/blob/img/8.png)
+  ![airodump-ng](https://github.com/annapsyktova/wepcracking/blob/img/9.png)
+4. Commview
+- là công cụ để bắt gói tin trên windows, tương tự như airodump-ng.
+- Giao diện của Commview :
+
+![Commview GUI](https://github.com/annapsyktova/wepcracking/blob/img/10.png)
+- Cách bắt gói tin trên Commview :
+- Đầu tiên ta sẽ sử dụng scanner mode để tìm kiếm wifi cần thực hiện phá mã.
+- Khi tìm được rồi ta có thể chuyển sang single channel mode với channel trùng với channel của wifi cần tìm và bắt đầu quá trình bắt gói tin.
+![Commview mode](https://github.com/annapsyktova/wepcracking/blob/img/11.png)
