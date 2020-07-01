@@ -33,7 +33,7 @@
 3. Airodump-ng
 - Tổng quan : là công cụ để bắt gói tin, bắt thông tin các mạng xung quanh, từ đây chúng ta có thể biết được các thông tin quan trọng như BSSID, channel, các client truy cập vào AP.
 - Để thực hiện bắt gói tin bằng airodump :
-  - Sử dụng câu lệnh airodump-ng wlan0mon :
+  - Sử dụng câu lệnh `airodump-ng wlan0mon` :
   ![airodump-ng](https://github.com/annapsyktova/wepcracking/blob/img/7.png)
   - Sau khi có các thông tin như bssid và channel của AP,  ta tiếp tục sử dụng airodump-ng để bắt gói tin
   ![airodump-ng](https://github.com/annapsyktova/wepcracking/blob/img/8.png)
