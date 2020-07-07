@@ -15,29 +15,38 @@
 - Để có thể bắt được nhiều IV trong một khoảng thời gian ngắn thì ta cần :
   - Fake authentication một client có sẵn để giao tiếp với AP bằng aireplay-ng
   
-  ```aireplay-ng --fakeauth 0 -a 14:CC:20:84:DD:B5 -h 84:16:F9:08:3C:30 wlan0mon```
+  `aireplay-ng --fakeauth 0 -a 14:CC:20:84:DD:B5 -h 84:16:F9:08:3C:30 wlan0mon`
   
   trong đó -a là bssid của AP,  còn -h là địa chỉ MAC của card mạng sử dụng, còn wlan0mon là tên interface của card mạng
   ![fake authen](https://github.com/annapsyktova/wepcracking/blob/img/1.png)
   - Tiếp theo ta sẽ tấn công arp vào mạng để tăng traffic trong mạng,  rút ngắn thời gian bắt gói tin
   
-  ```aireplay-ng -3 -b 14:CC:20:84:DD:B5 -h 84:16:F9:08:3C:30 wlan0mon```
+  `aireplay-ng -3 -b 14:CC:20:84:DD:B5 -h 84:16:F9:08:3C:30 wlan0mon`
   
   trong đó -3 là option arp-request, -b là bssid của AP, -h là địa chỉ MAC của card mạng :
   
   ![arp replay](https://github.com/annapsyktova/wepcracking/blob/img/2.png)
   - Trong trường hợp không bắt được gói ARP để tiến hành arp replay thì ta có thể sử dụng chức năng deauthentication của aireplay-ng để tạo gói ARP khi có client đăng nhập vào
   
+  `aireplay-ng -0 100 -a 14:CC:20:84:DD:B5 wlan0mon`
   
+  trong đó -0 là option deauthen, 100 là số gói tin deauthen gửi đi, còn -a là địa chỉ MAC của AP.
 2. Aircrack-ng
-- Tổng quan : là công cụ để crack wep/wpa2.  Có thể sử dụng trên windows cũng như linux. Trên windows thì aircrack-ng có giao diện như thế này :
+- Tổng quan : là công cụ để crack wep/wpa2.  Có thể sử dụng trên windows cũng như linux. 
+- Sử dụng file gói tin đã bắt được chứa các IV để crack WEP, ở trên linux :
+
+`aircrack-ng log.pcap`
+
+trong đó log.pcap là file chứa các packet.
+
+![aircrack-ng kali](https://github.com/annapsyktova/wepcracking/blob/img/6.png)
+
+Trên windows thì aircrack-ng có sử dụng giao diện để giao tiếp :
 
 ![aircrack-ng GUI windows](https://github.com/annapsyktova/wepcracking/blob/img/3.png)
 ![aircrack-ng GUI windows](https://github.com/annapsyktova/wepcracking/blob/img/4.png)
 ![aircrack-ng GUI windows](https://github.com/annapsyktova/wepcracking/blob/img/5.png)
-- Trên kali thì aircrack-ng sẽ có giao diện như thế này :
 
-![aircrack-ng kali](https://github.com/annapsyktova/wepcracking/blob/img/6.png)
 
 3. Airodump-ng
 - Tổng quan : là công cụ để bắt gói tin, bắt thông tin các mạng xung quanh, từ đây chúng ta có thể biết được các thông tin quan trọng như BSSID, channel, các client truy cập vào AP.
