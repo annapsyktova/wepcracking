@@ -13,12 +13,18 @@
 1. Aireplay-ng
 - Tổng quan : aireplay-ng là công cụ dùng để inject vào frames, chức năng chính là dùng để tạo traffic cho cracking wep và wpa2. ngoài ra còn có thể dùng các chức năng như deauthen, fake authen, arp request,…
 - Để có thể bắt được nhiều IV trong một khoảng thời gian ngắn thì ta cần :
-  - Fake authentication một client có sẵn để giao tiếp với AP bằng aireplay-ng, trong đó -a là bssid của AP,  còn -h là địa chỉ MAC của card mạng sử dụng :
+  - Fake authentication một client có sẵn để giao tiếp với AP bằng aireplay-ng
+  >`aireplay-ng --fakeauth 0 -a 14:CC:20:84:DD:B5 -h 84:16:F9:08:3C:30 wlan0mon`
+  trong đó -a là bssid của AP,  còn -h là địa chỉ MAC của card mạng sử dụng, còn wlan0mon là tên interface của card mạng
   
   ![fake authen](https://github.com/annapsyktova/wepcracking/blob/img/1.png)
-  - Tiếp theo ta sẽ tấn công arp vào mạng để tăng traffic trong mạng,  rút ngắn thời gian bắt gói tin, trong đó -3 là option arp-request, -b là bssid của AP, -h là địa chỉ MAC của card mạng :
+  - Tiếp theo ta sẽ tấn công arp vào mạng để tăng traffic trong mạng,  rút ngắn thời gian bắt gói tin
+  >`aireplay-ng -3 -b 14:CC:20:84:DD:B5 -h 84:16:F9:08:3C:30 wlan0mon`
+  trong đó -3 là option arp-request, -b là bssid của AP, -h là địa chỉ MAC của card mạng :
   
   ![arp replay](https://github.com/annapsyktova/wepcracking/blob/img/2.png)
+  - Trong trường hợp không bắt được gói ARP để tiến hành arp replay thì ta có thể sử dụng chức năng deauthentication của aireplay-ng để tạo gói ARP khi có client đăng nhập vào
+  
   
 2. Aircrack-ng
 - Tổng quan : là công cụ để crack wep/wpa2.  Có thể sử dụng trên windows cũng như linux. Trên windows thì aircrack-ng có giao diện như thế này :
