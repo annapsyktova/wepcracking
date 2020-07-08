@@ -22,6 +22,7 @@
   - Tiếp theo ta sẽ tấn công arp vào mạng để tăng traffic trong mạng,  rút ngắn thời gian bắt gói tin
   
   `aireplay-ng -3 -b 14:CC:20:84:DD:B5 -h 84:16:F9:08:3C:30 wlan0mon`
+  ![deauthen](
   
   trong đó -3 là option arp-request, -b là bssid của AP, -h là địa chỉ MAC của card mạng :
   
@@ -31,6 +32,8 @@
   `aireplay-ng -0 100 -a 14:CC:20:84:DD:B5 wlan0mon`
   
   trong đó -0 là option deauthen, 100 là số gói tin deauthen gửi đi, còn -a là địa chỉ MAC của AP.
+  
+  ![deauthen](https://github.com/annapsyktova/wepcracking/blob/img/2-1.png)
 2. Aircrack-ng
 - Tổng quan : là công cụ để crack wep/wpa2.  Có thể sử dụng trên windows cũng như linux. 
 - Sử dụng file gói tin đã bắt được chứa các IV để crack WEP, ở trên linux :
@@ -71,10 +74,13 @@ Trên windows thì aircrack-ng có sử dụng giao diện để giao tiếp :
 - Là công cụ bắt gói tin trên linux, giống như airodump-ng.
 - Để chạy Kismet, ta cần enable monitor mode của card mạng và chạy kismet. Web interface lúc đó sẽ sẵn sàng ở địa chỉ [localhost:2501](http:\\localhost:2501)
 - Chọn data source và chọn card mạng đã bật monitor mode :
+
 ![Kismet data source](https://github.com/annapsyktova/wepcracking/blob/img/13.png)
 - Khi biết được channel của wifi cần bắt ta sẽ tập trung vào channel đó :
+
 ![Kismet choose channel](https://github.com/annapsyktova/wepcracking/blob/img/14.png)
 - Các thông tin về AP bắt được : 
+
 ![Kismet AP capture](https://github.com/annapsyktova/wepcracking/blob/img/15.png)
 - Khi bắt gói tin thì sẽ có log file lưu lại (ta có thể chỉnh log file về dạng .pcapng),  sau đó có thể convert file log sang file .pcap và dùng aircrack-ng để crack.
 
