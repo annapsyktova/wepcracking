@@ -56,8 +56,11 @@ Trên windows thì aircrack-ng có sử dụng giao diện để giao tiếp :
 - Để thực hiện bắt gói tin bằng airodump :
   - Sử dụng câu lệnh `airodump-ng wlan0mon` :
   ![airodump-ng](https://github.com/annapsyktova/wepcracking/blob/img/7.png)
-  - Sau khi có các thông tin như bssid và channel của AP,  ta tiếp tục sử dụng airodump-ng để bắt gói tin
-  ![airodump-ng](https://github.com/annapsyktova/wepcracking/blob/img/8.png)
+  - Sau khi có các thông tin như bssid và channel của AP,  ta tiếp tục sử dụng airodump-ng để bắt gói tin :
+  
+  `airodump-ng --channel 5 --bssid 14:CC:20:84:DD:B5 wlan0mon`
+  
+  ![airodump-ng](https://github.com/annapsyktova/wepcracking/blob/img/8.png) 
   ![airodump-ng](https://github.com/annapsyktova/wepcracking/blob/img/9.png)
 4. Commview
 - Là công cụ để bắt gói tin trên windows, tương tự như airodump-ng.
