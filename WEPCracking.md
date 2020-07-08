@@ -1,6 +1,6 @@
 # WEP Cracking
 ## WEP là gì :
-- là một giao thức bảo mật trong kết nối wifi. Wep mã hóa bằng key, sử dụng một đoạn IV 24 bit và mã hóa bằng phương thức RC4.
+- Là một giao thức bảo mật trong kết nối wifi. Wep mã hóa bằng key, sử dụng một đoạn IV 24 bit và mã hóa bằng phương thức RC4.
 - WEP có thể bị phá vì nhiều lí do bảo mật khác nhau :
   - WEP sử dụng IV 24 bit, khá là nhỏ khi so sánh với số lượng gói tin được truyền, khi đến một thời điểm nhất định thì IV sẽ bị trùng 
   - RC4 là một phương thức mã hóa khá yếu, dễ bị bẻ khóa
@@ -34,6 +34,7 @@
   trong đó -0 là option deauthen, 100 là số gói tin deauthen gửi đi, còn -a là địa chỉ MAC của AP.
   
   ![deauthen](https://github.com/annapsyktova/wepcracking/blob/img/2-1.png)
+
 **2. Aircrack-ng**
 - Tổng quan : là công cụ để crack wep/wpa2.  Có thể sử dụng trên windows cũng như linux. 
 - Sử dụng file gói tin đã bắt được chứa các IV để crack WEP, ở trên linux :
@@ -54,7 +55,10 @@ Trên windows thì aircrack-ng có sử dụng giao diện để giao tiếp :
 **3. Airodump-ng**
 - Tổng quan : là công cụ để bắt gói tin, bắt thông tin các mạng xung quanh, từ đây chúng ta có thể biết được các thông tin quan trọng như BSSID, channel, các client truy cập vào AP.
 - Để thực hiện bắt gói tin bằng airodump :
-  - Sử dụng câu lệnh `airodump-ng wlan0mon` :
+  - Sử dụng câu lệnh :
+  
+  `airodump-ng wlan0mon` 
+  
   ![airodump-ng](https://github.com/annapsyktova/wepcracking/blob/img/7.png)
   - Sau khi có các thông tin như bssid và channel của AP,  ta tiếp tục sử dụng airodump-ng để bắt gói tin :
   
